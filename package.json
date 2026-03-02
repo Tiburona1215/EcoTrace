@@ -1,0 +1,30 @@
+{
+  "name": "ecotrace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tiburona1215/EcoTrace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tiburona1215/EcoTrace/issues"
+  },
+  "homepage": "https://github.com/Tiburona1215/EcoTrace#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

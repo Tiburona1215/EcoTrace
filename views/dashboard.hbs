@@ -1,0 +1,180 @@
+<div class="screen">
+    <div class="screen active" id="screen-dashboard">
+        <div class="hydro-alert">
+            <div class="hydro-icon">⛈️</div>
+            <div class="hydro-content">
+                <h3>🔴 HydroGuard — Alerta Nivel 2: Lluvias en 48 horas (ONAMET)</h3>
+                <p>Zonas críticas: Av. Winston Churchill · Los Mina · Avenida 27 de Febrero. Se recomienda reciclar
+                    materiales plásticos antes del evento para prevenir obstrucción de drenajes.</p>
+                <span class="hydro-incentive">🪙 Incentivo activado: <strong>&nbsp;3×&nbsp;</strong> Eco-Tokens hasta
+                    mañana 10pm</span>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" onclick="showScreen('tokens')">
+                <span class="stat-icon">♻️</span>
+                <div class="stat-value">847</div>
+                <div class="stat-label">Kg reciclados (mes)</div>
+                <div class="stat-delta">↑ +12% vs mes anterior</div>
+            </div>
+            <div class="stat-card" onclick="showScreen('tokens')">
+                <span class="stat-icon">🪙</span>
+                <div class="stat-value">3,240</div>
+                <div class="stat-label">Eco-Tokens acumulados</div>
+                <div class="stat-delta">≈ RD$1,620 en descuentos</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🌊</span>
+                <div class="stat-value" style="color:#ff7675">8</div>
+                <div class="stat-label">Imbornales protegidos</div>
+                <div class="stat-delta" style="color:#ff7675">Zona: Los Mina</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🌱</span>
+                <div class="stat-value">423</div>
+                <div class="stat-label">kg CO₂ evitados</div>
+                <div class="stat-delta">↑ +8% vs mes anterior</div>
+            </div>
+        </div>
+
+        <div class="grid-2-1">
+            <div class="card">
+                <div class="section-header">
+                    <div class="card-title">Actividad Reciente</div>
+                    <span class="tag tag-green">🟢 En vivo</span>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">🧴</div>
+                        <div class="activity-info">
+                            <div class="activity-name">PET tipo 1 — 2.4 kg</div>
+                            <div class="activity-time">Hoy, 09:14 · Recogida confirmada · Piantini</div>
+                        </div>
+                        <div class="activity-tokens">+120 🪙</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">📦</div>
+                        <div class="activity-info">
+                            <div class="activity-name">Cartón corrugado — 5.1 kg</div>
+                            <div class="activity-time">Ayer, 16:30 · Recogida confirmada · Naco</div>
+                        </div>
+                        <div class="activity-tokens">+255 🪙</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🍾</div>
+                        <div class="activity-info">
+                            <div class="activity-name">Vidrio — 3.8 kg</div>
+                            <div class="activity-time">Lun 24, 11:00 · Recogida confirmada · Gazcue</div>
+                        </div>
+                        <div class="activity-tokens">+76 🪙</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🥫</div>
+                        <div class="activity-info">
+                            <div class="activity-name">Aluminio — 0.9 kg</div>
+                            <div class="activity-time">Dom 23, 08:45 · Recogida confirmada · Bella Vista</div>
+                        </div>
+                        <div class="activity-tokens">+180 🪙</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:20px;">
+                <div class="token-widget">
+                    <div class="level-badge">⭐ Nivel: Guardián Verde</div>
+                    <div class="progress-ring">
+                        <svg width="80" height="80" viewBox="0 0 80 80">
+                            <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                            <circle class="progress-ring-fill" cx="40" cy="40" r="35" />
+                        </svg>
+                        <div class="ring-label">73%</div>
+                    </div>
+                    <div class="token-amount">3,240</div>
+                    <div class="token-label">Eco-Tokens disponibles</div>
+                    <button class="btn btn-primary btn-full" onclick="showScreen('tokens')">🛍️ Canjear Tokens</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Acciones Rápidas</div>
+                    <div style="display:flex;flex-direction:column;gap:8px;">
+                        <button class="btn btn-primary" style="justify-content:center"
+                            onclick="showScreen('scanner')">📷 Escanear material</button>
+                        <button class="btn btn-outline" style="justify-content:center"
+                            onclick="showScreen('recogida')">🚛 Solicitar recogida</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">Materiales reciclados este mes</div>
+                <div class="material-list">
+                    <div class="material-row">
+                        <div class="material-name" style="font-size:13px">🧴 PET</div>
+                        <div class="material-bar-wrap">
+                            <div class="material-bar-fill"
+                                style="width:72%;background:linear-gradient(90deg,#22a060,#34c97a)"></div>
+                        </div>
+                        <div class="material-kg">312 kg</div>
+                    </div>
+                    <div class="material-row">
+                        <div class="material-name" style="font-size:13px">📦 Cartón</div>
+                        <div class="material-bar-wrap">
+                            <div class="material-bar-fill"
+                                style="width:55%;background:linear-gradient(90deg,#f5a623,#ffc107)"></div>
+                        </div>
+                        <div class="material-kg">241 kg</div>
+                    </div>
+                    <div class="material-row">
+                        <div class="material-name" style="font-size:13px">🥫 Aluminio</div>
+                        <div class="material-bar-wrap">
+                            <div class="material-bar-fill"
+                                style="width:38%;background:linear-gradient(90deg,#3498db,#74b9ff)"></div>
+                        </div>
+                        <div class="material-kg">168 kg</div>
+                    </div>
+                    <div class="material-row">
+                        <div class="material-name" style="font-size:13px">🍾 Vidrio</div>
+                        <div class="material-bar-wrap">
+                            <div class="material-bar-fill"
+                                style="width:29%;background:linear-gradient(90deg,#a29bfe,#6c5ce7)"></div>
+                        </div>
+                        <div class="material-kg">126 kg</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Top Barrios — Semana actual</div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span style="font-size:20px">🥇</span>
+                        <div class="activity-info">
+                            <div class="activity-name">Piantini</div>
+                            <div class="activity-time">482 kg · 124 participantes</div>
+                        </div>
+                        <span class="tag tag-green">+18%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span style="font-size:20px">🥈</span>
+                        <div class="activity-info">
+                            <div class="activity-name">Naco</div>
+                            <div class="activity-time">415 kg · 98 participantes</div>
+                        </div>
+                        <span class="tag tag-green">+11%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span style="font-size:20px">🥉</span>
+                        <div class="activity-info">
+                            <div class="activity-name">Gazcue</div>
+                            <div class="activity-time">378 kg · 87 participantes</div>
+                        </div>
+                        <span class="tag tag-amber">+4%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

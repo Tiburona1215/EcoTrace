@@ -1,0 +1,90 @@
+<div class="screen">
+    <div class="screen" id="screen-mapa">
+        <div class="section-header">
+            <h2>🗺️ Mapa de Recolectores en Tiempo Real</h2>
+            <span class="tag tag-green">🟢 5 activos</span>
+        </div>
+
+        <div class="grid-2-1" style="margin-bottom:24px">
+            <div>
+                <div class="map-container">
+                    <div class="map-grid"></div>
+                    <div class="map-roads">
+                        <div class="map-road-h" style="top:30%"></div>
+                        <div class="map-road-h" style="top:55%"></div>
+                        <div class="map-road-h" style="top:75%"></div>
+                        <div class="map-road-v" style="left:25%"></div>
+                        <div class="map-road-v" style="left:55%"></div>
+                        <div class="map-road-v" style="left:78%"></div>
+                    </div>
+
+                    <!-- Route lines -->
+                    <div class="map-route" style="top:55%;left:25%;width:120px;transform:rotate(-15deg)"></div>
+                    <div class="map-route" style="top:42%;left:45%;width:100px;transform:rotate(25deg)"></div>
+
+                    <!-- Pins -->
+                    <div class="map-pin green" style="bottom:44%;left:22%" title="Carlos Méndez — Disponible">
+                        <span>👷</span>
+                    </div>
+                    <div class="map-pin blue" style="top:28%;left:52%" title="María Santos — En ruta">
+                        <span>🚛</span>
+                    </div>
+                    <div class="map-pin green" style="top:22%;right:18%" title="Pedro Castillo — Disponible">
+                        <span>👷</span>
+                    </div>
+                    <div class="map-pin amber" style="bottom:20%;left:54%" title="Punto de entrega — Planta Recicla DN">
+                        <span>🏭</span>
+                    </div>
+                    <div class="map-pin red" style="top:50%;left:48%" title="Zona crítica — Imbornal saturado">
+                        <span>⚠️</span>
+                    </div>
+                    <div class="map-pin red" style="bottom:30%;right:22%" title="Zona crítica — Alto riesgo inundación">
+                        <span>⚠️</span>
+                    </div>
+
+                    <!-- Labels -->
+                    <div class="map-label" style="bottom:48%;left:30%">C. Méndez</div>
+                    <div class="map-label" style="top:22%;left:56%">M. Santos</div>
+                    <div class="map-label" style="bottom:16%;left:48%;color:#f5a623">♻️ Planta Recicla DN</div>
+
+                    <div class="map-overlay-stats">
+                        <div class="map-stat-pill">🚛 <b>5</b> activos</div>
+                        <div class="map-stat-pill">⚠️ <b>2</b> zonas críticas</div>
+                        <div class="map-stat-pill">📍 <b>12</b> solicitudes hoy</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:12px;">
+                <div class="card">
+                    <div class="card-title">Leyenda</div>
+                    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;">
+                        <div style="display:flex;align-items:center;gap:10px;"><span
+                                style="width:14px;height:14px;border-radius:50%;background:var(--green-500);display:inline-block"></span>
+                            Recolector disponible</div>
+                        <div style="display:flex;align-items:center;gap:10px;"><span
+                                style="width:14px;height:14px;border-radius:50%;background:var(--blue);display:inline-block"></span>
+                            En ruta activa</div>
+                        <div style="display:flex;align-items:center;gap:10px;"><span
+                                style="width:14px;height:14px;border-radius:50%;background:var(--amber);display:inline-block"></span>
+                            Planta recicladora</div>
+                        <div style="display:flex;align-items:center;gap:10px;"><span
+                                style="width:14px;height:14px;border-radius:50%;background:var(--red);display:inline-block"></span>
+                            Zona crítica (⛈️ HydroGuard)</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Ahorro de rutas (IA)</div>
+                    <div style="text-align:center;padding:12px 0">
+                        <div
+                            style="font-family:'Syne',sans-serif;font-weight:800;font-size:32px;color:var(--green-300)">
+                            40%</div>
+                        <div style="font-size:13px;color:var(--text-muted)">menos combustible hoy</div>
+                    </div>
+                    <div style="font-size:12px;color:var(--text-muted);text-align:center">vs. rutas no optimizadas</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

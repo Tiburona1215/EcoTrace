@@ -1,0 +1,115 @@
+<div class="screen">
+    <div class="screen" id="screen-scanner">
+        <div class="section-header">
+            <h2>📷 Escanear Material con IA</h2>
+            <span class="tag tag-green">🤖 Modelo activo</span>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <div class="scanner-zone" id="scannerZone" onclick="startScan()">
+                    <div class="scanner-line" id="scanLine"></div>
+                    <span class="scanner-icon" id="scannerEmoji">📦</span>
+                    <div class="scanner-text" id="scannerText">Toca para activar la cámara IA</div>
+                    <div class="scanner-sub" id="scannerSub">Soporta: PET, HDPE, vidrio, aluminio, cartón, papel</div>
+                </div>
+
+                <div class="result-card" id="resultCard">
+                    <div class="result-header">
+                        <div class="material-icon-big" id="resultEmoji">🧴</div>
+                        <div class="result-meta">
+                            <h3 id="resultName">Plástico PET tipo 1</h3>
+                            <p id="resultDesc">Botella de agua / bebida — Alta pureza</p>
+                            <div style="margin-top:8px;display:flex;gap:6px;">
+                                <span class="tag tag-green">♻️ Reciclable</span>
+                                <span class="tag tag-amber" id="resultConfTag">Confianza: 94%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" id="confBar" style="width:94%"></div>
+                    </div>
+                    <div class="result-stats">
+                        <div class="result-stat-item">
+                            <div class="result-stat-value" id="statWeight">~1.2 kg</div>
+                            <div class="result-stat-label">Peso estimado</div>
+                        </div>
+                        <div class="result-stat-item">
+                            <div class="result-stat-value" id="statTokens">+60 🪙</div>
+                            <div class="result-stat-label">Eco-Tokens</div>
+                        </div>
+                        <div class="result-stat-item">
+                            <div class="result-stat-value" id="statCO2">0.8 kg</div>
+                            <div class="result-stat-label">CO₂ evitado</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:12px;margin-top:12px;" id="resultActions" style="display:none">
+                    <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="schedulePickup()">🚛
+                        Solicitar recogida</button>
+                    <button class="btn btn-outline" onclick="startScan()">🔄 Escanear otro</button>
+                </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:16px;">
+                <div class="card">
+                    <div class="card-title">Guía de materiales</div>
+                    <div class="activity-list">
+                        <div class="activity-item" onclick="simulateScan('pet')">
+                            <div style="font-size:22px">🧴</div>
+                            <div class="activity-info">
+                                <div class="activity-name">Plástico PET (tipo 1)</div>
+                                <div class="activity-time">Botellas agua, jugos, refrescos</div>
+                            </div>
+                            <div class="activity-tokens">50/kg 🪙</div>
+                        </div>
+                        <div class="activity-item" onclick="simulateScan('aluminio')">
+                            <div style="font-size:22px">🥫</div>
+                            <div class="activity-info">
+                                <div class="activity-name">Aluminio</div>
+                                <div class="activity-time">Latas de bebidas, papel aluminio</div>
+                            </div>
+                            <div class="activity-tokens">200/kg 🪙</div>
+                        </div>
+                        <div class="activity-item" onclick="simulateScan('carton')">
+                            <div style="font-size:22px">📦</div>
+                            <div class="activity-info">
+                                <div class="activity-name">Cartón</div>
+                                <div class="activity-time">Cajas, embalajes, cartón corrugado</div>
+                            </div>
+                            <div class="activity-tokens">50/kg 🪙</div>
+                        </div>
+                        <div class="activity-item" onclick="simulateScan('vidrio')">
+                            <div style="font-size:22px">🍾</div>
+                            <div class="activity-info">
+                                <div class="activity-name">Vidrio</div>
+                                <div class="activity-time">Botellas, frascos, recipientes</div>
+                            </div>
+                            <div class="activity-tokens">20/kg 🪙</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="background:rgba(34,160,96,0.08);border-color:rgba(34,160,96,0.3)">
+                    <div class="card-title">⚡ Modo HydroGuard activo</div>
+                    <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">Por alerta climática, los
+                        tokens
+                        se multiplican:</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                        <div style="text-align:center;padding:10px;background:rgba(34,160,96,0.1);border-radius:8px;">
+                            <div style="font-size:11px;color:var(--text-muted)">PET</div>
+                            <div style="font-weight:700;color:var(--green-300)">150/kg 🪙</div>
+                            <div style="font-size:10px;color:var(--green-400)">3×</div>
+                        </div>
+                        <div style="text-align:center;padding:10px;background:rgba(34,160,96,0.1);border-radius:8px;">
+                            <div style="font-size:11px;color:var(--text-muted)">Cartón</div>
+                            <div style="font-weight:700;color:var(--green-300)">150/kg 🪙</div>
+                            <div style="font-size:10px;color:var(--green-400)">3×</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

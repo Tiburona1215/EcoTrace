@@ -1,0 +1,13 @@
+<body>
+    <div class="app">
+        {{> sidebar}}
+
+        <div class="main">
+            {{> topbar}}
+
+            <div class="content">
+                {{{body}}}
+        </div>
+    </div>
+    {{> notifications}}
+</body>

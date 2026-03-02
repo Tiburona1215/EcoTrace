@@ -1,0 +1,120 @@
+<div class="screen">
+    <div class="screen" id="screen-recogida">
+        <div class="section-header">
+            <h2>🚛 Solicitar Recogida</h2>
+            <span class="tag tag-green">5 recolectores disponibles</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">Datos de la solicitud</div>
+
+                <div class="form-group">
+                    <label class="form-label">📍 Dirección de recogida</label>
+                    <input class="form-input" type="text" value="Calle El Conde 45, Gazcue, D.N." />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">📦 Materiales a recoger</label>
+                    <select class="form-input">
+                        <option>PET — ~2.5 kg (detectado por IA)</option>
+                        <option>Cartón — ~4.0 kg</option>
+                        <option>Aluminio — ~0.8 kg</option>
+                        <option>Mixto (varios materiales)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">📅 Fecha preferida</label>
+                    <input class="form-input" type="date" value="2025-02-26" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">🕐 Franja horaria</label>
+                    <div class="time-slots">
+                        <div class="time-slot">7–9 AM</div>
+                        <div class="time-slot selected">9–11 AM</div>
+                        <div class="time-slot">11–1 PM</div>
+                        <div class="time-slot">2–4 PM</div>
+                        <div class="time-slot">4–6 PM</div>
+                        <div class="time-slot">6–8 PM</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">📝 Notas adicionales</label>
+                    <input class="form-input" type="text" placeholder="Ej: Portón azul, tocar timbre..." />
+                </div>
+
+                <div
+                    style="background:rgba(34,160,96,0.08);border:1px solid rgba(34,160,96,0.2);border-radius:10px;padding:14px;margin-bottom:16px;">
+                    <div style="font-size:13px;color:var(--text-muted);margin-bottom:6px;">Estimación de tokens a
+                        recibir:
+                    </div>
+                    <div
+                        style="font-family:'Space Mono',monospace;font-size:24px;font-weight:700;color:var(--green-300)">
+                        +375 🪙</div>
+                    <div style="font-size:11px;color:var(--text-muted)">Incluye 3× HydroGuard activo</div>
+                </div>
+
+                <button class="btn btn-primary btn-full" onclick="confirmPickup()">✅ Confirmar Recogida</button>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:16px;">
+                <div class="card">
+                    <div class="card-title">Recolector asignado</div>
+                    <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+                        <div
+                            style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--green-700),var(--green-500));display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 0 0 3px rgba(52,201,122,0.3)">
+                            👷</div>
+                        <div>
+                            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:16px">Carlos Méndez
+                            </div>
+                            <div style="font-size:13px;color:var(--text-muted)">Recolector verificado · Zona Norte DN
+                            </div>
+                            <div style="margin-top:4px;display:flex;gap:4px;align-items:center">
+                                <span style="color:#ffd700;font-size:14px">★★★★★</span>
+                                <span style="font-size:12px;color:var(--text-muted)">4.9 · 1,240 recogidas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="background:rgba(34,160,96,0.08);border-radius:8px;padding:12px;font-size:13px;color:var(--text-muted)">
+                        📍 A 1.2 km · ETA estimado: <strong style="color:var(--green-300)">~18 min</strong> · Ruta
+                        optimizada por IA
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">📦 Solicitudes recientes</div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-dot" style="background:var(--green-400)"></div>
+                            <div class="activity-info">
+                                <div class="activity-name">PET + Aluminio — 3.3 kg</div>
+                                <div class="activity-time">Lun 24 · Completada · +220 🪙</div>
+                            </div>
+                            <span class="tag tag-green">✓</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-dot" style="background:var(--green-400)"></div>
+                            <div class="activity-info">
+                                <div class="activity-name">Cartón — 5.1 kg</div>
+                                <div class="activity-time">Jue 21 · Completada · +255 🪙</div>
+                            </div>
+                            <span class="tag tag-green">✓</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-dot" style="background:var(--amber)"></div>
+                            <div class="activity-info">
+                                <div class="activity-name">Vidrio — 2.8 kg</div>
+                                <div class="activity-time">Programada · Mañana 9–11 AM</div>
+                            </div>
+                            <span class="tag tag-amber">⏳</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
