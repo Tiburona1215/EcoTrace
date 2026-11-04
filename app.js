@@ -1,6 +1,5 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const hbs = require('hbs');
 const path = require('path');
 
 const app = express();
@@ -23,4 +22,5 @@ app.get("/scanner", (req, res) => res.render("scanner"));
 app.get("/silverUI", (req, res) => res.render("silverUI"));
 app.get("/tokens", (req, res) => res.render("tokens"));
 
-app.listen(12000, () => console.log("Servidor iniciado en el puerto 12000"));
+const PORT = process.env.PORT || 12000;
+app.listen(PORT, () => console.log(`Servidor iniciado en el puerto ${PORT}`));
